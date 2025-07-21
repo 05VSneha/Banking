@@ -25,3 +25,16 @@ void deposit() {
         cout << "Invalid amount! Deposit failed.\n";
     }
 }
+void withdraw() {
+    double amount;
+    cout << "Enter amount to withdraw: ";
+    cin >> amount;
+
+    if (amount > 0 && amount <= balance) {
+        balance -= amount;
+        cout << "Rs." << amount << " withdrawn successfully!\n";
+    } else {
+        cout << "Invalid amount or insufficient balance!\n";
+    }
+}
+
