@@ -37,4 +37,21 @@ void withdraw() {
         cout << "Invalid amount or insufficient balance!\n";
     }
 }
+   void display() const {
+        cout << "\n--- Account Info ---\n";
+        cout << "Name: " << accountHolder << endl;
+        cout << "Account Number: " << accountNumber << endl;
+        cout << "Balance: $" << balance << endl;
+    }
+};
 
+int main() {
+    BankAccount acc("Alice Smith", 1001, 500.00);
+    acc.display();
+
+    acc.deposit(150.00);
+    acc.withdraw(200.00);
+    acc.display();
+
+    return 0;
+}
